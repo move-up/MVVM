@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.table-wrap {
+				margin: 0 auto;
+				width: 900px;
+				height: 450px;
+			}
+			.table-box {
+				position: relative;
+				padding: 50px 0 0 0;
+				border-left: 2px solid #ddd;
+				border-bottom: 2px solid #ddd;
+			}
+			table.table-score {
+				/* width: 500px; */
+				border-collapse: collapse;
+			}
+			.table-score tbody td {
+				max-width: 130px;
+				max-height: 160px;
+				line-height: 20px;
+				padding: 5px 8px;
+				border: 1px solid #eee;
+				/* text-align: center; */
+			}
+			.table-score tbody td a.single {
+				display: block;
+			}
+			.table-score tbody td a.more {
+				display: block;
+			}
+			.green {
+				background-color: #c6e0b4;
+			}
+			.blue {
+				background-color: #b4c6e7;
+			}
+			/* .arrow {
+				position: absolute;
+				display: inline-block;
+				border-top: 2px solid;
+				border-right: 2px solid;
+				width: 8px;
+				height: 8px;
+				border-color: #ddd;
+				transform: rotate(-135deg);
+				margin: 8px auto auto 8px;
+			} */
+			/*箭头向上*/
+			.to_top {
+				position: absolute;
+				width: 0;
+				height: 0;
+				border-bottom: 10px solid #ccc;
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+			}
+			/*箭头向下*/
+			/* .to_bottom {
+				width: 0;
+				height: 0;
+				border-top: 10px solid #ccc;
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+			} */
+			/*箭头向左*/
+			/* .to_left {
+				width: 0;
+				height: 0;
+				border-right: 10px solid #ccc;
+				border-top: 10px solid transparent;
+				border-bottom: 10px solid transparent;
+			} */
+			/*箭头向右*/
+			.to_right {
+				position: absolute;
+				width: 0;
+				height: 0;
+				border-left: 10px solid #cccf;
+				border-top: 10px solid transparent;
+				border-bottom: 10px solid transparent;
+			}
+			.arrow-top {
+				left: -11.5px;
+				top: -7px;
+				/* transform: rotate(-45deg); */
+			}
+			.arrow-right {
+				right: -1.5px;
+				bottom: -11px;
+				/* transform: rotate(45deg); */
+			}
+		</style>
+	</head>
+	<body>
+		<div id="total" class="table-wrap">
+			<div class="table-box">
+				<div class="arrow arrow-top to_top"></div>
+				<table class="table-score">
+					<tbody>
+						<tr>
+							<td rowspan="5">绩效</td>
+							<td class="green">s</td>
+							<td>
+								<div>1=绩效 S 能力 D</div>
+								<span>(人数：6)</span>
+								<a class="single" href="#">王某某</a>
+								<a class="single" href="#">王某某</a>
+								<a class="single" href="#">王某某</a>
+								<a class="single" href="#">王某某</a>
+								<a class="single" href="#">王某某</a>
+								<a class="more" href="#">……</a>
+							</td>
+							<td>
+								<div>10=绩效 S 能力 C</div>
+							</td>
+							<td>
+								<div>6=绩效 S 能力 B</div>
+							</td>
+							<td>
+								<div>3=绩效 S 能力 A</div>
+							</td>
+							<td>
+								<div>1=绩效 S 能力 S</div>
+								<span>(人数：2)</span>
+								<a class="single" href="#">王某某</a>
+								<a class="single" href="#">王某某</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="green">A</td>
+							<td>19</td>
+							<td>14</td>
+							<td>9</td>
+							<td>5</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td class="green">B</td>
+							<td>22</td>
+							<td>18</td>
+							<td>13</td>
+							<td>8</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td class="green">C</td>
+							<td>24</td>
+							<td>21</td>
+							<td>17</td>
+							<td>12</td>
+							<td>7</td>
+						</tr>
+						<tr>
+							<td class="green">D</td>
+							<td>25</td>
+							<td>3</td>
+							<td>22</td>
+							<td>26</td>
+							<td>11</td>
+						</tr>
+						<tr>
+							<td>纵轴</td>
+							<td></td>
+							<td class="blue">D</td>
+							<td class="blue">C</td>
+							<td class="blue">B</td>
+							<td class="blue">A</td>
+							<td class="blue">S</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>横轴</td>
+							<td colspan="5">能力</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="arrow arrow-right to_right"></div>
+			</div>
+		</div>
+	</body>
+</html>
