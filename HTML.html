@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+		<link
+			rel="stylesheet"
+			href="../../../../../../hps/ly/css/animate.min.css"
+		/>
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script
+			type="text/javascript"
+			src="../../../../../../hps/jquery-1.7.2.js"
+		></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<link rel="stylesheet" href="../../../../../../hps/ly/css/bootstrap.css" />
+		<link rel="stylesheet" href="../../../../../../hps/ly/css/main.css" />
+		<style>
+			#total {
+				width: 450px;
+				height: 390px;
+			}
+			#outter {
+				width: 306px;
+				height: 306px;
+				float: left;
+				position: relative;
+				top: 26px;
+			}
+
+			#inner1,
+			#inner3 {
+				width: 306px;
+				height: 100px;
+			}
+			#inner2 {
+				width: 306px;
+				height: 100px;
+			}
+			2 #inner1,
+			#inner2 {
+				width: 306px;
+				height: 102px;
+			}
+
+			.inner div {
+				width: 100px;
+				height: 100px;
+				text-align: center;
+				float: left;
+			}
+
+			#inner1_1:hover {
+				border: 1px solid #086a9b;
+			}
+			#inner1_2:hover {
+				border: 1px solid #086a9b;
+			}
+			#inner1_3:hover {
+				border: 1px solid #086a9b;
+			}
+			#inner2_1:hover {
+				border: 1px solid #086a9b;
+			}
+			#inner2_2:hover {
+				border: 1px solid #086a9b;
+			}
+			#inner2_3:hover {
+				border: 1px solid #086a9b;
+			}
+			#inner3_1:hover {
+				border: 1px solid #086a9b;
+			}
+			#inner3_2:hover {
+				border: 1px solid #086a9b;
+			}
+			#inner3_3:hover {
+				border: 1px solid #086a9b;
+			}
+
+			#inner1_1 {
+				border-top: 1px solid #7f9fbf;
+				border-bottom: 1px solid #7f9fbf;
+				border-left: 1px solid white;
+				border-right: 1px solid #7f9fbf;
+			}
+			#inner3_1 {
+				border-top: 1px solid #7f9fbf;
+				border-bottom: 1px solid white;
+				border-left: 1px solid white;
+				border-right: 1px solid #7f9fbf;
+			}
+			#inner1_3 {
+				border: 1px solid #7f9fbf;
+			}
+			#inner3_3 {
+				border-top: 1px solid #7f9fbf;
+				border-bottom: 1px solid white;
+				border-left: 1px solid #7f9fbf;
+				border-right: 1px solid #7f9fbf;
+			}
+			#inner1_2 {
+				border-top: 1px solid #7f9fbf;
+				border-bottom: 1px solid #7f9fbf;
+				border-left: 1px solid white;
+				border-right: 1px solid white;
+			}
+			#inner3_2 {
+				border-top: 1px solid #7f9fbf;
+				border-bottom: 1px solid white;
+				border-left: 1px solid white;
+				border-right: 1px solid white;
+			}
+			#inner2_1 {
+				border-top: 1px solid white;
+				border-bottom: 1px solid white;
+				border-left: 1px solid white;
+				border-right: 1px solid #7f9fbf;
+			}
+			#inner2_3 {
+				border-top: 1px solid white;
+				border-bottom: 1px solid white;
+				border-left: 1px solid #7f9fbf;
+				border-right: 1px solid #7f9fbf;
+			}
+			#inner2_2 {
+				border: 1px solid white;
+			}
+			#xArrowContainer {
+				width: 329px;
+				height: 16px;
+			}
+			#xArrow {
+				border: 16px solid #767676;
+				border-top: 13px solid transparent;
+				border-left: 5px solid transparent;
+				border-right: 4px solid transparent;
+				width: 0;
+				height: 0px;
+				color: #767676;
+				position: relative;
+				left: 26px;
+				top: -13px;
+				float: left;
+			}
+			#x {
+				width: 3px;
+				height: 329px;
+				color: #767676;
+				background: #767676;
+				float: left;
+				position: relative;
+			}
+			#ability {
+				width: 20px;
+				height: 169px;
+				float: left;
+				position: relative;
+				text-align: center;
+				padding-top: 160px;
+			}
+			#yArrowContainer {
+				width: 70px;
+				height: 30px;
+				position: relative;
+				float: left;
+				top: 14px;
+			}
+			#yArrow {
+				border: 16px solid #767676;
+				border-top: 5px solid transparent;
+				border-bottom: 4px solid transparent;
+				border-right: 13px solid transparent;
+				width: 0;
+				height: 0px;
+				color: white;
+				position: absolute;
+				float: left;
+			}
+			#y {
+				width: 330px;
+				height: 3px;
+				color: white;
+				background: #767676;
+				float: left;
+				position: relative;
+				top: 20px;
+			}
+			#potential {
+				width: 330px;
+				height: 20px;
+				float: left;
+				position: relative;
+				top: 20px;
+				text-align: center;
+			}
+			#inner1_1 div {
+				width: 100px;
+				height: 20px;
+				position: relative;
+				float: left;
+			}
+			#inner1_2 div {
+				width: 100px;
+				height: 20px;
+				position: relative;
+				float: left;
+			}
+			#inner1_3 div {
+				width: 100px;
+				height: 20px;
+				position: relative;
+				float: left;
+			}
+			#inner2_1 div {
+				width: 100px;
+				height: 20px;
+				position: relative;
+				float: left;
+			}
+			#inner2_2 div {
+				width: 100px;
+				height: 20px;
+				position: relative;
+				float: left;
+			}
+			#inner2_3 div {
+				width: 100px;
+				height: 20px;
+				position: relative;
+				float: left;
+			}
+			#inner3_1 div {
+				width: 100px;
+				height: 20px;
+				position: relative;
+				float: left;
+			}
+			#inner3_2 div {
+				width: 100px;
+				height: 20px;
+				position: relative;
+				float: left;
+			}
+			#inner3_3 div {
+				width: 100px;
+				height: 20px;
+				position: relative;
+				float: left;
+			}
+			a:link {
+				text-decoration: none;
+			}
+			a:hover {
+				color: red;
+			}
+			a {
+				font-size: 13px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="total">
+			<div id="xArrowContainer">
+				<div id="xArrow">.</div>
+				潜 <br />质
+				<br />
+				<br />
+				<br />
+				<br />高
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />中
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />低
+			</div>
+			<div id="ability">　</div>
+			<div id="x">．</div>
+			<div id="outter">
+				<div id="inner1" class="inner">
+					<div id="inner1_1">
+						<div id="line11_1">
+							<a href="#" onclick="f2('1')">6.待观察员工</a>
+						</div>
+						<div id="line11_2">
+							<a href="#" onclick="f2('2')"> </a>
+						</div>
+						<div id="line11_3">
+							<a href="%Bind(:10)" target="_blank" class="test-btn"
+								>%Bind(:1)</a
+							>
+						</div>
+						<div id="line11_4">
+							<a href="#" onclick="f2('3')"> </a>
+						</div>
+						<div id="line11_5">
+							<a href="#" onclick="f2('4')"> </a>
+						</div>
+					</div>
+					<div id="inner1_2">
+						<div id="line12_1">
+							<a href="#" onclick="f2('5')">3.关键人才</a>
+						</div>
+						<div id="line12_2">
+							<a href="#" onclick="f2('6')"> </a>
+						</div>
+						<div id="line12_3">
+							<a href="%Bind(:11)" target="_blank" class="test-btn"
+								>%Bind(:2)</a
+							>
+						</div>
+						<div id="line12_4">
+							<a href="#" onclick="f2('7')"> </a>
+						</div>
+						<div id="line12_5">
+							<a href="#" onclick="f2('8')"> </a>
+						</div>
+					</div>
+					<div id="inner1_3">
+						<div id="line13_1">
+							<a href="#" onclick="f2('9')">1.关键人才</a>
+						</div>
+						<div id="line13_2">
+							<a href="#" onclick="f2('10')"> </a>
+						</div>
+						<div id="line13_3">
+							<a href="%Bind(:12)" target="_blank" class="test-btn"
+								>%Bind(:3)</a
+							>
+						</div>
+						<div id="line13_4">
+							<a href="#" onclick="f2('11')"> </a>
+						</div>
+						<div id="line13_5">
+							<a href="#" onclick="f2('12')"> </a>
+						</div>
+					</div>
+					<div id="inner1_4">
+						<div id="line13_1">
+							<a href="#" onclick="f2('9')">1.关键人才</a>
+						</div>
+						<div id="line13_2">
+							<a href="#" onclick="f2('10')"> </a>
+						</div>
+						<div id="line13_3">
+							<a href="%Bind(:12)" target="_blank" class="test-btn"
+								>%Bind(:3)</a
+							>
+						</div>
+						<div id="line13_4">
+							<a href="#" onclick="f2('11')"> </a>
+						</div>
+						<div id="line13_5">
+							<a href="#" onclick="f2('12')"> </a>
+						</div>
+					</div>
+					<div id="inner1_5">
+						<div id="line13_1">
+							<a href="#" onclick="f2('9')">1.关键人才</a>
+						</div>
+						<div id="line13_2">
+							<a href="#" onclick="f2('10')"> </a>
+						</div>
+						<div id="line13_3">
+							<a href="%Bind(:12)" target="_blank" class="test-btn"
+								>%Bind(:3)</a
+							>
+						</div>
+						<div id="line13_4">
+							<a href="#" onclick="f2('11')"> </a>
+						</div>
+						<div id="line13_5">
+							<a href="#" onclick="f2('12')"> </a>
+						</div>
+					</div>
+				</div>
+				<div id="inner2" class="inner">
+					<div id="inner2_1">
+						<div id="line21_1">
+							<a href="#" onclick="f2('13')">8.待观察员工</a>
+						</div>
+						<div id="line21_2">
+							<a href="#" onclick="f2('14')"> </a>
+						</div>
+						<div id="line21_3">
+							<a href="%Bind(:13)" target="_blank" class="test-btn"
+								>%Bind(:4)</a
+							>
+						</div>
+						<div id="line21_4">
+							<a href="#" onclick="f2('15')"> </a>
+						</div>
+						<div id="line21_5">
+							<a href="#" onclick="f2('16')"> </a>
+						</div>
+					</div>
+					<div id="inner2_2">
+						<div id="line22_1">
+							<a href="#" onclick="f2('17')">5.可靠绩效达成者</a>
+						</div>
+						<div id="line22_2">
+							<a href="#" onclick="f2('18')"> </a>
+						</div>
+						<div id="line22_3">
+							<a href="%Bind(:14)" target="_blank" class="test-btn"
+								>%Bind(:5)</a
+							>
+						</div>
+						<div id="line22_4">
+							<a href="#" onclick="f2('19')"> </a>
+						</div>
+						<div id="line22_5">
+							<a href="#" onclick="f2('20')"> </a>
+						</div>
+					</div>
+					<div id="inner2_3">
+						<div id="line23_1">
+							<a href="#" onclick="f2('21')">2.关键人才</a>
+						</div>
+						<div id="line23_2">
+							<a href="#" onclick="f2('22')"> </a>
+						</div>
+						<div id="line23_3">
+							<a href="%Bind(:15)" target="_blank" class="test-btn"
+								>%Bind(:6)</a
+							>
+						</div>
+						<div id="line23_4">
+							<a href="#" onclick="f2('23')"> </a>
+						</div>
+						<div id="line23_5">
+							<a href="#" onclick="f2('24')"> </a>
+						</div>
+					</div>
+				</div>
+				<div id="inner3" class="inner">
+					<div id="inner3_1">
+						<div id="line31_1">
+							<a href="#" onclick="f2('25')">9.待调整员工</a>
+						</div>
+						<div id="line31_2">
+							<a href="#" onclick="f2('26')"> </a>
+						</div>
+						<div id="line31_3">
+							<a href="%Bind(:16)" target="_blank" class="test-btn"
+								>%Bind(:7)</a
+							>
+						</div>
+						<div id="line31_4">
+							<a href="#" onclick="f2('27')"> </a>
+						</div>
+						<div id="line31_5">
+							<a href="#" onclick="f2('28')"> </a>
+						</div>
+					</div>
+					<div id="inner3_2">
+						<div id="line32_1">
+							<a href="#" onclick="f2('29')">7.可靠绩效达成者</a>
+						</div>
+						<div id="line32_2">
+							<a href="#" onclick="f2('30')"> </a>
+						</div>
+						<div id="line32_3">
+							<a href="%Bind(:17)" target="_blank" class="test-btn"
+								>%Bind(:8)</a
+							>
+						</div>
+						<div id="line32_4">
+							<a href="#" onclick="f2('31')"> </a>
+						</div>
+						<div id="line32_5">
+							<a href="#" onclick="f2('32')"> </a>
+						</div>
+					</div>
+					<div id="inner3_3">
+						<div id="line33_1">
+							<a href="#" onclick="f2('33')">4.可靠绩效达成者</a>
+						</div>
+						<div id="line33_2">
+							<a href="#" onclick="f2('34')"> </a>
+						</div>
+						<div id="line33_3">
+							<a href="%Bind(:18)" target="_blank" class="test-btn"
+								>%Bind(:9)</a
+							>
+						</div>
+						<div id="line33_4">
+							<a href="#" onclick="f2('35')"> </a>
+						</div>
+						<div id="line33_5">
+							<a href="#" onclick="f2('36')"> </a>
+						</div>
+					</div>
+				</div>
+				低 中 高
+			</div>
+			<div id="y">.</div>
+			<div id="potential"></div>
+			<div id="yArrowContainer">
+				<div id="yArrow">.</div>
+				<br />绩效
+			</div>
+		</div>
+	</body>
+</html>
